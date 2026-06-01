@@ -1,0 +1,114 @@
+/* ── About Section ────────────────────────────────────── */
+.about {
+  padding: 80px 5%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Alternating row layout */
+.row {
+  display: flex;
+  gap: 60px;
+  align-items: center;
+  margin-bottom: 80px;
+}
+
+/* Text block */
+.textBlock {
+  flex: 1;
+  min-width: 260px;
+}
+
+.heading {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  line-height: 1.15;
+  color: #0d0d0d;
+  margin-bottom: 20px;
+}
+
+.underlineYellow {
+  border-bottom: 2px solid #d4a843;
+  padding-bottom: 2px;
+}
+
+.body {
+  font-size: 14.5px;
+  color: #555555;
+  line-height: 1.75;
+  max-width: 380px;
+  margin-bottom: 24px;
+}
+
+/* Image block */
+.imageBlock {
+  position: relative;
+  flex: 1;
+  min-width: 260px;
+  display: flex;
+  justify-content: center;
+}
+
+.circleImg {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+  position: relative;
+  z-index: 2;
+}
+
+/* Pink gradient blob behind first image */
+.blob {
+  position: absolute;
+  top: -20%;
+  right: -10%;
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle, rgba(245, 194, 217, 0.5) 0%, transparent 70%);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+/* Triangle decorations */
+.triangleTopRight {
+  position: absolute;
+  top: 6%;
+  right: 4%;
+  z-index: 3;
+}
+
+.triangleBottomLeft {
+  position: absolute;
+  bottom: 4%;
+  left: 8%;
+  z-index: 3;
+}
+
+/* Wavy divider */
+.waveDivider {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 80px;
+  overflow: hidden;
+}
+
+.waveDivider svg {
+  max-width: 100%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+    gap: 40px;
+    margin-bottom: 50px;
+  }
+
+  .circleImg {
+    width: 220px;
+    height: 220px;
+  }
+}
